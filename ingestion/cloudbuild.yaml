@@ -1,0 +1,16 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - functions
+  - deploy
+  - dataplatform-prod-cloudfunction-hub-ingestion
+  - --gen2
+  - --source=ingestion
+  - --trigger-http
+  - --entry-point=dataplatform_prod_cloudfunction_hub_ingestion
+  - --runtime=python39
+  - --region=us-central1  
+  - --timeout=3600s
+  - --memory=4096MB
+  - --max-instances=4
+

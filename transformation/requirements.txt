@@ -1,0 +1,9 @@
+# Function dependencies, for example:
+# package>=version
+pandas==1.5.2
+requests>=2.26.0
+fsspec>=2021.10.1
+gcsfs>=2021.10.1
+google-cloud-bigquery
+google-cloud
+pyarrow

@@ -1,0 +1,13 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - functions
+  - deploy
+  - dataplatform_prod_cloudfunction_hub_validation
+  - --source=validation
+  - --trigger-http
+  - --runtime=python39
+  - --region=us-central1
+  - --timeout=540s
+  - --memory=512MB
+  - --max-instances=4
